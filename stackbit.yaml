@@ -1,0 +1,498 @@
+stackbitVersion: ~0.3.0
+ssgName: jekyll
+publishDir: _site
+dataDir: _data
+pagesDir: ''
+models:
+  post:
+    type: page
+    label: Post
+    folder: _posts
+    match:
+      - 2016-04-19-New-Post.markdown
+      - 2016-05-02-New-Matlab-Script.md
+    fields:
+      - type: string
+        name: layout
+        label: Layout
+      - type: string
+        name: title
+        label: Title
+      - type: string
+        name: author
+        label: Author
+      - type: string
+        name: tags
+        label: Tags
+      - type: string
+        name: subtitle
+        label: Subtitle
+      - type: string
+        name: category
+        label: Category
+      - type: boolean
+        name: visualworkflow
+        label: Visualworkflow
+  post_1:
+    type: page
+    label: Post 1
+    folder: _posts
+    match:
+      - 2016-05-01-New-Notebook.markdown
+    fields:
+      - type: string
+        name: layout
+        label: Layout
+      - type: string
+        name: title
+        label: Title
+      - type: string
+        name: author
+        label: Author
+      - type: string
+        name: tags
+        label: Tags
+      - type: string
+        name: subtitle
+        label: Subtitle
+      - type: string
+        name: category
+        label: Category
+      - type: string
+        name: notebookfilename
+        label: Notebookfilename
+      - type: boolean
+        name: visualworkflow
+        label: Visualworkflow
+  post_2:
+    type: page
+    label: Post 2
+    folder: _posts
+    match:
+      - 2016-05-02-New-Presentation.markdown
+    fields:
+      - type: string
+        name: layout
+        label: Layout
+      - type: string
+        name: title
+        label: Title
+      - type: string
+        name: author
+        label: Author
+      - type: string
+        name: tags
+        label: Tags
+      - type: string
+        name: subtitle
+        label: Subtitle
+      - type: string
+        name: theme
+        label: Theme
+      - type: string
+        name: trans
+        label: Trans
+      - type: markdown
+        name: horizontal
+        label: Horizontal
+      - type: string
+        name: vertical
+        label: Vertical
+  post_3:
+    type: page
+    label: Post 3
+    folder: _posts
+    match:
+      - 2016-05-02-New-Projector.markdown
+    fields:
+      - type: string
+        name: layout
+        label: Layout
+      - type: string
+        name: title
+        label: Title
+      - type: string
+        name: author
+        label: Author
+      - type: string
+        name: tags
+        label: Tags
+      - type: string
+        name: subtitle
+        label: Subtitle
+      - type: string
+        name: dataset
+        label: Dataset
+  post_4:
+    type: page
+    label: Post 4
+    folder: _posts
+    match:
+      - 2016-05-02-New-Surface-Visualization.markdown
+    fields:
+      - type: string
+        name: layout
+        label: Layout
+      - type: string
+        name: title
+        label: Title
+      - type: string
+        name: author
+        label: Author
+      - type: string
+        name: tags
+        label: Tags
+      - type: string
+        name: subtitle
+        label: Subtitle
+      - type: string
+        name: plydata
+        label: Plydata
+  project:
+    type: page
+    label: Project
+    folder: projects
+    match: '*'
+    fields:
+      - type: string
+        name: layout
+        label: Layout
+      - type: string
+        name: title
+        label: Title
+      - type: string
+        name: description
+        label: Description
+      - type: image
+        name: header-img
+        label: Header Img
+      - type: string
+        name: category
+        label: Category
+  page_1:
+    type: page
+    label: Page 1
+    match: '*'
+    fields:
+      - type: string
+        name: layout
+        label: Layout
+      - type: string
+        name: title
+        label: Title
+      - type: string
+        name: description
+        label: Description
+      - type: image
+        name: header-img
+        label: Header Img
+  intro:
+    type: data
+    label: Intro
+    file: intro.json
+    fields:
+      - type: list
+        name: cells
+        label: Cells
+        items:
+          type: object
+          fields:
+            - type: string
+              name: cell_type
+              label: Cell Type
+            - type: number
+              name: execution_count
+              label: Execution Count
+              subtype: int
+            - type: object
+              name: metadata
+              label: Metadata
+              fields:
+                - type: boolean
+                  name: collapsed
+                  label: Collapsed
+                - type: boolean
+                  name: scrolled
+                  label: Scrolled
+            - type: list
+              name: outputs
+              label: Outputs
+              items:
+                type: model
+                models:
+                  - object_7mvekg9l2l
+                  - object_4jvkdbln9z
+                  - object_a0ir0walnc
+                  - object_j9cv2kl1e1
+                  - object_e92jvnwdo5
+                  - object_o9aajp85pe
+                  - object_96vhd4zh3j
+                  - object_0mz5onbjgm
+                  - object_cs4j0g0g01
+                  - object_42zow9sdo1
+            - type: list
+              name: source
+              label: Source
+              items:
+                type: markdown
+      - type: object
+        name: metadata
+        label: Metadata
+        fields:
+          - type: object
+            name: kernelspec
+            label: Kernelspec
+            fields:
+              - type: string
+                name: display_name
+                label: Display Name
+              - type: string
+                name: language
+                label: Language
+              - type: string
+                name: name
+                label: Name
+          - type: object
+            name: language_info
+            label: Language Info
+            fields:
+              - type: object
+                name: codemirror_mode
+                label: Codemirror Mode
+                fields:
+                  - type: string
+                    name: name
+                    label: Name
+                  - type: number
+                    name: version
+                    label: Version
+                    subtype: int
+              - type: string
+                name: file_extension
+                label: File Extension
+              - type: string
+                name: mimetype
+                label: Mimetype
+              - type: string
+                name: name
+                label: Name
+              - type: string
+                name: nbconvert_exporter
+                label: Nbconvert Exporter
+              - type: string
+                name: pygments_lexer
+                label: Pygments Lexer
+              - type: string
+                name: version
+                label: Version
+      - type: number
+        name: nbformat
+        label: Nbformat
+        subtype: int
+      - type: number
+        name: nbformat_minor
+        label: Nbformat Minor
+        subtype: int
+  members:
+    type: data
+    label: Members
+    file: members.yml
+    isList: true
+    items:
+      type: object
+      fields:
+        - type: string
+          name: name
+          label: Name
+        - type: string
+          name: role
+          label: Role
+        - type: string
+          name: img
+          label: Img
+        - type: string
+          name: github
+          label: Github
+        - type: string
+          name: gplus
+          label: Gplus
+        - type: string
+          name: bio
+          label: Bio
+        - type: string
+          name: url
+          label: Url
+        - type: boolean
+          name: visible
+          label: Visible
+  object_a0ir0walnc:
+    type: object
+    label: Object 1
+    fields:
+      - type: string
+        name: name
+        label: Name
+      - type: string
+        name: output_type
+        label: Output Type
+      - type: list
+        name: text
+        label: Text
+        items:
+          type: string
+  object_j9cv2kl1e1:
+    type: object
+    label: Object 2
+    fields:
+      - type: object
+        name: data
+        label: Data
+        fields:
+          - type: text
+            name: image/png
+            label: Image Png
+          - type: list
+            name: text/plain
+            label: Text Plain
+            items:
+              type: string
+      - type: string
+        name: output_type
+        label: Output Type
+  object_7mvekg9l2l:
+    type: object
+    label: Object 3
+    fields: []
+  object_4jvkdbln9z:
+    type: object
+    label: Object 4
+    fields:
+      - type: object
+        name: data
+        label: Data
+        fields:
+          - type: text
+            name: image/png
+            label: Image Png
+          - type: list
+            name: text/plain
+            label: Text Plain
+            items:
+              type: string
+      - type: string
+        name: output_type
+        label: Output Type
+  object_e92jvnwdo5:
+    type: object
+    label: Object 5
+    fields:
+      - type: object
+        name: data
+        label: Data
+        fields:
+          - type: text
+            name: image/png
+            label: Image Png
+          - type: list
+            name: text/plain
+            label: Text Plain
+            items:
+              type: string
+      - type: string
+        name: output_type
+        label: Output Type
+  object_o9aajp85pe:
+    type: object
+    label: Object 6
+    fields:
+      - type: object
+        name: data
+        label: Data
+        fields:
+          - type: text
+            name: image/png
+            label: Image Png
+          - type: list
+            name: text/plain
+            label: Text Plain
+            items:
+              type: string
+      - type: string
+        name: output_type
+        label: Output Type
+  object_96vhd4zh3j:
+    type: object
+    label: Object 7
+    fields:
+      - type: object
+        name: data
+        label: Data
+        fields:
+          - type: text
+            name: image/png
+            label: Image Png
+          - type: list
+            name: text/plain
+            label: Text Plain
+            items:
+              type: string
+      - type: string
+        name: output_type
+        label: Output Type
+  object_0mz5onbjgm:
+    type: object
+    label: Object 8
+    fields:
+      - type: object
+        name: data
+        label: Data
+        fields:
+          - type: text
+            name: image/png
+            label: Image Png
+          - type: list
+            name: text/plain
+            label: Text Plain
+            items:
+              type: string
+      - type: string
+        name: output_type
+        label: Output Type
+  object_cs4j0g0g01:
+    type: object
+    label: Object 9
+    fields:
+      - type: object
+        name: data
+        label: Data
+        fields:
+          - type: text
+            name: image/png
+            label: Image Png
+          - type: list
+            name: text/plain
+            label: Text Plain
+            items:
+              type: string
+      - type: string
+        name: output_type
+        label: Output Type
+  object_42zow9sdo1:
+    type: object
+    label: Object 10
+    fields:
+      - type: object
+        name: data
+        label: Data
+        fields:
+          - type: text
+            name: image/png
+            label: Image Png
+          - type: list
+            name: text/plain
+            label: Text Plain
+            items:
+              type: string
+      - type: string
+        name: output_type
+        label: Output Type
